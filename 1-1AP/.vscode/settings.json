@@ -22,10 +22,9 @@
   "idf.openOcdConfigs": [
     "board/esp32c3-ftdi.cfg"
   ],
-  "idf.flashType": "UART",
   "files.associations": {
-    "nvs_flash.h": "c",
-    "esp_wifi.h": "c",
-    "esp_wifi_default.h": "c"
-  }
+    "esp_memory_utils.h": "c"
+  },
+  "idf.portWin": "COM8",
+  "idf.flashType": "UART"
 }

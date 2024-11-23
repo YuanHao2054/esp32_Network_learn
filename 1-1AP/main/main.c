@@ -3,21 +3,19 @@
 #include "esp_event.h"
 #include "esp_netif.h"
 #include "esp_wifi.h"
+#include "freertos/FreeRTOS.h"
+#include "freertos/task.h"
 
 void app_main(void)
 {
-    nvs_flash_init(); //初始化nvs_flash分区，专门用来存储键值对数据
-    esp_event_loop_create_default(); //创建默认的事件循环
-    //esp_idf默认开启freeRTOS
+    nvs_flash_init();
+    esp_event_loop_create_default();//创建默认事件循环
 
-    //配置wifi的AP模式
-    //esp_netif 
-    //wifi esp32的一个外设 TCP/IP协议栈
+    //在循环里每1s打印一次hello world
+    while(1)
+    {
+        printf("hello world\n");
+        vTaskDelay(1000 / portTICK_PERIOD_MS);
+    }
 
-    //初始化网卡的底层配置
-    esp_netif_init();
-    
-    
-
- 
 }

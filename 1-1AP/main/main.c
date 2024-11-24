@@ -26,8 +26,17 @@ void WIFI_Callback(void *event_handler_arg, esp_event_base_t event_base, int32_t
         //printf("STA的MAC:"MACSTR"\n", MAC2STR(sta_mac)); // 打印STA的MAC地址
         for (int i = 0; i < sta_list.num; i++)
         {
-            printf("STA的MAC:"MACSTR"\n", MAC2STR(sta_list.sta[i].mac));
+            printf("新接入的STA的MAC:"MACSTR"\n", MAC2STR(sta_list.sta[i].mac));
         }
+    }
+
+    if (event_base == WIFI_EVENT && event_id == WIFI_EVENT_AP_STADISCONNECTED) // 判断是否是STA断开事件(断开事件的ID是WIFI_EVENT_AP_STADISCONNECTED)
+    {
+        //把断开的STA的信息写入到event_data中
+        wifi_event_ap_stadisconnected_t *info = (wifi_event_ap_stadisconnected_t *)event_data; // 把event_data转换为wifi_event_ap_stadisconnected_t类型的指针, info为指向event_data的指针
+        //打印断开的STA的MAC地址
+        printf("断开的STA的MAC:"MACSTR"\n", MAC2STR(info->mac)); // 打印断开的STA的MAC地址
+
     }
 }
 
@@ -39,6 +48,7 @@ void app_main(void)
     // 注册事件处理程序 STA接入事件
     //如果读到一个结构体，base是IP_EVENT，id是IP_EVENT_AP_STAIPASSIGNED时，调用WIFI_Callback函数
     esp_event_handler_instance_register(IP_EVENT, IP_EVENT_AP_STAIPASSIGNED, &WIFI_Callback, NULL, NULL); // 注册wifi事件处理函数
+    esp_event_handler_instance_register(WIFI_EVENT, WIFI_EVENT_AP_STADISCONNECTED, &WIFI_Callback, NULL, NULL); // 注册当STA设备断开时的事件处理函数
 
     // 初始化网卡的底层配置
     esp_netif_init();

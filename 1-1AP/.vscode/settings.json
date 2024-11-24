@@ -23,7 +23,8 @@
     "board/esp32c3-ftdi.cfg"
   ],
   "files.associations": {
-    "esp_memory_utils.h": "c"
+    "esp_memory_utils.h": "c",
+    "nvs_flash.h": "c"
   },
   "idf.portWin": "COM8",
   "idf.flashType": "UART"

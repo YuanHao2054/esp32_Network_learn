@@ -1,1 +1,5 @@
-5eb8e203faf32bdde31a7aebbe08690fde7e5ab1
+0000000000000000000000000000000000000000 064d7c4bf97d003ac94d3d551c9717d278ef6fbe realhaohao2023 <128681465+realhaohao2023@users.noreply.github.com> 1732354747 +0800	commit (initial): Initial commit
+064d7c4bf97d003ac94d3d551c9717d278ef6fbe 1d8717a0eba684307d8ec84238f26c73a48d98d3 realhaohao2023 <128681465+realhaohao2023@users.noreply.github.com> 1732363909 +0800	commit: 配置好环境
+1d8717a0eba684307d8ec84238f26c73a48d98d3 4a64aa915ebe045d94757776e274e0404c4759dc realhaohao2023 <128681465+realhaohao2023@users.noreply.github.com> 1732416490 +0800	commit: AP
+4a64aa915ebe045d94757776e274e0404c4759dc 5eb8e203faf32bdde31a7aebbe08690fde7e5ab1 realhaohao2023 <128681465+realhaohao2023@users.noreply.github.com> 1732424133 +0800	commit: STA配置
+5eb8e203faf32bdde31a7aebbe08690fde7e5ab1 791934a70112a3a0ec542134ab9fcaf49639bd9b realhaohao2023 <128681465+realhaohao2023@users.noreply.github.com> 1732441551 +0800	commit: 静态IP

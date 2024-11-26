@@ -1,7 +1,7 @@
 {
     "version":            "1.1",
     "project_name":       "TCPClinet",
-    "project_version":    "5eb8e20-dirty",
+    "project_version":    "791934a-dirty",
     "project_path":       "D:/myproject/ESP32Code/esp32_Network_learn/2-1TCPClient",
     "idf_path":           "D:/ESPIDF/esp/v5.3.1/esp-idf",
     "build_dir":          "D:/myproject/ESP32Code/esp32_Network_learn/2-1TCPClient/build",

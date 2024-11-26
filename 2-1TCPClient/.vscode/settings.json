@@ -5,5 +5,8 @@
     "board/esp32c3-ftdi.cfg"
   ],
   "idf.flashType": "UART",
-  "idf.portWin": "COM8"
+  "idf.portWin": "COM8",
+  "files.associations": {
+    "functional": "cpp"
+  }
 }

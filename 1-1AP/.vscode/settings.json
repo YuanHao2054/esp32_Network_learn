@@ -20,7 +20,7 @@
   ],
   "idf.adapterTargetName": "esp32c3",
   "idf.openOcdConfigs": [
-    "board/esp32c3-ftdi.cfg"
+    "board/esp32c3-bridge.cfg"
   ],
   "files.associations": {
     "esp_memory_utils.h": "c",

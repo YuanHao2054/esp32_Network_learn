@@ -26,6 +26,6 @@
     "esp_memory_utils.h": "c",
     "nvs_flash.h": "c"
   },
-  "idf.portWin": "COM8",
+  "idf.portWin": "COM7",
   "idf.flashType": "UART"
 }

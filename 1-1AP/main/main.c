@@ -82,9 +82,10 @@ void app_main(void)
     esp_wifi_start();
 
     // 初始化gpio12、13，设置为推挽输出
-    esp_rom_gpio_pad_select_gpio(12);
+    esp_rom_gpio_pad_select_gpio(4);
     esp_rom_gpio_pad_select_gpio(13);
-    gpio_set_direction(12, GPIO_MODE_OUTPUT);
+    
+    gpio_set_direction(4, GPIO_MODE_OUTPUT);
     gpio_set_direction(13, GPIO_MODE_OUTPUT);
 
     // 在循环里每1s打印一次hello world
@@ -94,12 +95,14 @@ void app_main(void)
         for (int i = 1; i <= 10; i++)
         {
             printf("%d\n", i);
-            gpio_set_level(12, 1);
+            gpio_set_level(4, 1);
             gpio_set_level(13, 0);
             vTaskDelay(1000 / portTICK_PERIOD_MS);
-            gpio_set_level(12, 0);
+            printf("hello world\n");
+            gpio_set_level(4, 0);
             gpio_set_level(13, 1);
             vTaskDelay(1000 / portTICK_PERIOD_MS);
+            printf("hello world\n");
 
             if (i == 10)
             {
